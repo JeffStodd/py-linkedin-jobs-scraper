@@ -48,9 +48,6 @@ class QueryFilters(__Base):
 
             try:
                 query_params = get_query_params(self.company_jobs_url)
-                if 'f_C' not in query_params:
-                    raise ValueError('Parameter company_jobs_url is invalid. '
-                                     'Please check the documentation on how find a company jobs link from LinkedIn')
             except:
                 raise ValueError('Parameter company_jobs_url must be a valid url')
 
